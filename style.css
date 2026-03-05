@@ -1,78 +1,108 @@
-h1 {
-    text-align: center;
-    color: #333;
-    font-family: Arial, sans-serif;
-    margin-top: 20px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;  
+}
+
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background-image: url(img/scroll_2-removebg-preview.png);
+    background-size: cover;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
 
 }
 
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+.todo-app h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-input[type="text"] {
-    width: calc(100% - 22px);
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
 }
 
-button {
-    padding: 10px 15px;
+input{
+    flex: 1;
     border: none;
-    border-radius: 5px;
-    background-color: #28a745;
-    color: white;
+    outline: none;
+    background-color: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: rgb(58, 58, 161);
+    color: #fff;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 40px;
 }
 
-button:hover {
-    background-color: #218838;
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(img/checkbox-blank-circle-outline-32.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
 }
 
-li {
-    padding: 10px;
-    border-bottom: 1px solid #eee;
+ul li.checked::before{
+    background-image: url(img/green-check-mark-verified-circle-16223_32.png);
 }
 
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
 
-body {
-    background-image: url('https://i.pinimg.com/736x/6a/62/36/6a623681dc8cf23f1375aa3b915d005a.jpg');
-    background-attachment: fixed;
-    
 }
 
-html, body {
-  width: 100%;
-  height:100%;
-}
-
-body {
-    background: linear-gradient(-45deg, #84a2e2, #252164, #23a6d5, #d7d6df);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+ul li span:hover{
+    background: #edeef0;   
 }
