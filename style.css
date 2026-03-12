@@ -13,7 +13,7 @@
 .todo-app{
     width: 100%;
     max-width: 540px;
-    background-image: url(img/scroll_2-removebg-preview.png);
+    background-color: white;
     background-size: cover;
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
@@ -74,7 +74,7 @@ ul li::before{
     height: 28px;
     width: 28px;
     border-radius: 50%;
-    background-image: url(img/checkbox-blank-circle-outline-32.png);
+    background-image: url(https://static.thenounproject.com/png/1625516-200.png);
     background-size: cover;
     background-position: center;
     top: 12px;
